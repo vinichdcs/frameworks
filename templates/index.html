@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Loja Online PP - De tudo para todos</title>
+    <style>
+        
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        li {
+            display: inline-block;
+            position: relative;
+            padding: 10px;
+        }
+
+        a {
+            text-decoration: none;
+            color: #333;
+        }
+
+       
+        .submenu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #f9f9f9;
+            border: 1px solid #ccc;
+            padding: 10px;
+        }
+
+        li:hover .submenu {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <h1>Bem-vindo à Loja Online PP</h1>
+    <h4> Você chegou à Loja Online PP, compre com quem precisa vender e venda para quem precisa comprar!</h4>
+    <ul>
+        <li>
+            <a href={url_for('cadastro')}}">Cadastro</a>
+            
+            <ul class="submenu">
+                <li><a href="#">Usuário</a></li>
+                <li><a href="#">Anúncio</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href={{url_for('categoria')}}">Categoria</a>
+            
+            <ul class="submenu">
+                <li><a href="#">Esportes</a></li>
+                <li><a href="#">Tecnologia</a></li>
+                <li><a href="#">Games</a></li>
+            </ul>
+        </li>
+        
+        <li>
+            <a href={{url_for('vendas')}}">Vendas</a>
+            
+            <ul class="submenu">
+                <li><a href="#">Minhas vendas</a></li>
+                <li><a href="#">Novo anúncio</a></li>
+                <li><a href="#">Relatório de vendas</a></li>
+            </ul>
+        </li>
+
+
+        <li>
+            <a href={{url_for('compras')}}">Compras</a>
+            
+            <ul class="submenu">
+                <li><a href="#">Minhas Compras</a></li>
+                <li><a href="#">Favoritos</a></li>
+                <li><a href="#">Relatório de Compras</a></li>
+               
+            </ul>
+        </li>
+    </ul>
+</body>
+</html>
